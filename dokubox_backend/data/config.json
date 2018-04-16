@@ -1,0 +1,16 @@
+{
+	"twitter": {
+		"consumer_key": "1Rtog8Qa09VVfbmQ5daTg",
+		"consumer_secret": "Uiwh09DDBZmdlmdFGVXs0Hqbeb6YeeTttsCFTrk7c",
+		"access_token": "2225094338-A0wneGqYNaM8nNLK7itwOxc2RQkw4Wt9QJ6PNnM",
+		"access_token_secret": "uvtgz9Qg8CSA1i6OFP3d2cyxza7leyA8xlrSfOwV1FWNo"
+	},
+	"flickr": {
+		"consumer_key": "b0c6f992bd55f932be0f8da8673b742a",
+		"consumer_secret": "7322d4435569a0c7",
+		"access_token": "72157638245562925-419ed4e572543647",
+		"access_token_secret": "73f77af69cb3ff8c",
+		"_access_token": "72157638253994395-ab7815d51a944361",
+		"_access_token_secret": "af26cb7fe6f56e74"
+	}
+}

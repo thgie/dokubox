@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flat-ui.css">
+    <link rel="stylesheet" href="css/docubooth.css">
+        
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript">
+        var swfVersionStr = "11.4.0";
+        var xiSwfUrlStr = "playerProductInstall.swf";
+        var flashvars = {};
+        var params = {};
+        params.quality = "high";
+        params.bgcolor = "#ffffff";
+        params.allowscriptaccess = "sameDomain";
+        params.allowfullscreen = "true";
+        var attributes = {};
+        attributes.id = "MultiCam";
+        attributes.name = "MultiCam";
+        attributes.align = "middle";
+        swfobject.embedSWF(
+            "MultiCam.swf", "flashContent", 
+            "1170", "876", 
+            swfVersionStr, xiSwfUrlStr, 
+            flashvars, params, attributes);
+        swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+    </script>
+</head>
+<body class="multicam">
+    <div class="container">
+        <div class="row">
+          <h3>Take some snapshots</h3>
+          <ol class="breadcrumb">
+            <li>Intro <i class="input-icon fui-check-inverted"></i></li>
+            <li>Capture</li>
+            <li>Register</li>
+          </ol>
+        </div>
+        <div class="row top"></div>
+        <div class="row flash">
+            <div id="flashContent">
+                <p>
+                    To view this page ensure that Adobe Flash Player version 
+                    11.4.0 or greater is installed. 
+                </p>
+                <script type="text/javascript"> 
+                    var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://"); 
+                    document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" 
+                                    + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" ); 
+                </script> 
+            </div>
+            
+            <noscript>
+                <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="1170" height="876" id="MultiCam">
+                    <param name="movie" value="MultiCam.swf" />
+                    <param name="quality" value="high" />
+                    <param name="bgcolor" value="#ffffff" />
+                    <param name="allowScriptAccess" value="sameDomain" />
+                    <param name="allowFullScreen" value="true" />
+                    <object type="application/x-shockwave-flash" data="MultiCam.swf" width="1170" height="876">
+                        <param name="quality" value="high" />
+                        <param name="bgcolor" value="#ffffff" />
+                        <param name="allowScriptAccess" value="sameDomain" />
+                        <param name="allowFullScreen" value="true" />
+                        <p> 
+                            Either scripts and active content are not permitted to run or Adobe Flash Player version
+                            11.4.0 or greater is not installed.
+                        </p>
+                        <a href="http://www.adobe.com/go/getflashplayer">
+                            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash Player" />
+                        </a>
+                    </object>
+                </object>
+            </noscript>
+        </div>
+        <div class="row bottom"></div>
+        <div class="row">
+            <a href="register.html" class="btn btn-success btn-large col-md-3">Le Click</a>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

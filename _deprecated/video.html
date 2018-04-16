@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/flat-ui.css">
+    <link rel="stylesheet" href="css/docubooth.css">
+            
+    <script type="text/javascript" src="swfobject.js"></script>
+    <script type="text/javascript">
+            var swfVersionStr = "11.4.0";
+            var xiSwfUrlStr = "playerProductInstall.swf";
+            var flashvars = {};
+            var params = {};
+            params.quality = "high";
+            params.bgcolor = "#ffffff";
+            params.allowscriptaccess = "sameDomain";
+            params.allowfullscreen = "true";
+            var attributes = {};
+            attributes.id = "CaptureCam";
+            attributes.name = "CaptureCam";
+            attributes.align = "middle";
+            swfobject.embedSWF(
+                "CaptureCam.swf", "flashContent", 
+                "100%", "100%", 
+                swfVersionStr, xiSwfUrlStr, 
+                flashvars, params, attributes);
+            swfobject.createCSS("#flashContent", "display:block;text-align:left;");
+    </script>
+</head>
+<body class="capturecam">
+    <div class="container">
+        <div class="row">
+          <h3>Take a video</h3>
+          <ol class="breadcrumb">
+            <li>Intro <i class="input-icon fui-check-inverted"></i></li>
+            <li>Capture</li>
+            <li>Register</li>
+          </ol>
+        </div>
+        <div class="row flash top">
+            <div id="flashContent">
+                <p>
+                    To view this page ensure that Adobe Flash Player version 
+                    11.4.0 or greater is installed. 
+                </p>
+                <script type="text/javascript"> 
+                    var pageHost = ((document.location.protocol == "https:") ? "https://" : "http://"); 
+                    document.write("<a href='http://www.adobe.com/go/getflashplayer'><img src='" 
+                                    + pageHost + "www.adobe.com/images/shared/download_buttons/get_flash_player.gif' alt='Get Adobe Flash player' /></a>" ); 
+                </script> 
+            </div>
+        </div>
+        <div class="row bottom"></div>
+        <div class="row">
+            <a href="#" class="btn btn-danger btn-large col-md-3 record init">start recording</a>
+        </div>
+    </div>  
+
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+
+        $(function(){
+            console.log('ready');
+            $('a.record').click(function(e){
+                e.preventDefault();
+
+                if($('a.record').hasClass('init')){
+                    $('a.record').removeClass('init').addClass('recording').text('is recordin now. click to stop.');
+                    document.getElementById('CaptureCam').start_recording();
+                }
+                else if($('a.record').hasClass('recording')){
+                    $('a.record').removeClass('recording');
+                    $('<a href="register.html" class="btn btn-success btn-large col-md-3 col-md-offset-6">last step</a>')
+                        .insertAfter('a.record');
+                    document.getElementById('CaptureCam').stop_recording();
+                }
+            })
+        });
+
+    </script>
+
+</body>
+</html>
